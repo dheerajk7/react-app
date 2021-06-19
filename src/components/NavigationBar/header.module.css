@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #202c56;
+  padding: 0px 30px;
+  height: 60px;
+  box-shadow: 0px 0px 5px 1px #202c56;
+}
+
+.header .logo {
+  color: #fffeff;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1.2px;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 10px;
+  padding: 3px 16px;
+  border-radius: 16px;
+}
+
+li a {
+  color: #fffeff;
+  font-weight: 450;
+  text-decoration: none;
+  transition: 1s all;
+  border-color: gray;
+}
+
+li a:hover {
+  border-bottom: 1px solid #fffeff;
+}

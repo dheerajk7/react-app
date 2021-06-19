@@ -1,0 +1,99 @@
+.audioControlMainContainer {
+}
+
+.audioControlContainer {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  background: transparent linear-gradient(270deg, #7c90db 0%, #b3c3ef 100%) 0%
+    0% no-repeat padding-box;
+}
+
+.audioControlContainer div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  display: inline-block;
+  margin: 0px 10px;
+  box-shadow: 0px 0px 1px 1px #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audioControlContainer div {
+  cursor: pointer;
+}
+
+.audioControlContainer div i {
+  color: #000982d9;
+  font-size: 30px;
+  transition: 0.3s all;
+}
+
+.audioControlContainer .microPhoneIcon:hover i {
+  color: #ffffff !important;
+}
+
+.audioControlContainer .microPhoneIcon:hover {
+  background-color: #000982d9 !important;
+}
+
+.callCutButton i {
+  transform: rotate(136deg);
+  color: #ff0000ba !important;
+  transition: 0.3s all;
+}
+
+.callCutButton:hover {
+  background-color: #ff0000ba !important;
+  color: white;
+}
+
+.callCutButton:hover i {
+  color: white !important;
+}
+
+.microPhoneImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 80px);
+}
+
+.microPhoneImage {
+  height: 50%;
+  width: 50%;
+}
+
+.microPhoneIconContainer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaveMeetingButton {
+  height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5.5px;
+  color: #f1f1f1;
+  background-color: #bd0d0dfc;
+  transition: 0.5s all;
+}
+
+.leaveMeetingButton span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
