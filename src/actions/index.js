@@ -37,7 +37,9 @@ export function loginUser(body) {
             .then((response) => response.json())
             .then((data) => {
                 console.log('data login API', data);
-                dispatch(setLoginUser({}));
+                if (data.success) {
+                    dispatch(setLoginUser(data.data[0]));
+                }
             });
         await dispatch(loadingStop());
     };
