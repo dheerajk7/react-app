@@ -3,10 +3,16 @@ import classes from "./meeting_board.module.css";
 import { Drawer } from "antd";
 import "antd/dist/antd.css";
 import { AudioControls } from "../components";
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-function MeetingBoard() {
+function MeetingBoard(props) {
   const [DoctorInfoDrawer, setDoctorInfoDrawer] = useState(false);
   const [patientInfoDrawer, setPatientInfoDrawer] = useState(false);
+
+  if(!props.isLoggedIn) {
+    return <Redirect to="/" />
+  }
   return (
     <div className={classes.meetingBoard}>
       <div className={classes.meetingBoardLeftSection}>
@@ -48,4 +54,12 @@ function MeetingBoard() {
   );
 }
 
-export default MeetingBoard;
+function mapStateToProps(state) {
+  return {
+    loading: state.loading,
+    isLoggedIn: state.isLoggedIn,
+  };
+}
+
+// sending props to component
+export default connect(mapStateToProps)(MeetingBoard);

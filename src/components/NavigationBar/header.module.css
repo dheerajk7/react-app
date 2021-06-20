@@ -47,3 +47,8 @@ li a:hover {
 .logo a:hover {
   color: white !important;
 }
+
+.loggedInButton {
+  cursor: pointer;
+  color: white;
+}

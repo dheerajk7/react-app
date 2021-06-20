@@ -3,16 +3,16 @@ import classes from "./patientDashboard.module.css";
 import { Collapse } from "antd";
 import DummyIcon from '../images/dummy-icon-image.png';
 import 'antd/dist/antd.css';
-import { InfoCircleOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import {
   Form,
   DatePicker,
   Select,
   Button,
 } from 'antd';
-const text = "List Item";
 const { Panel } = Collapse;
 const patientList = [
   {
@@ -59,24 +59,6 @@ const patientList = [
   },
 ];
 
-const formItemLayout = {
-  labelCol: {
-    span: 4,
-  },
-  wrapperCol: {
-    span: 8,
-  },
-};
-const formTailLayout = {
-  labelCol: {
-    span: 4,
-  },
-  wrapperCol: {
-    span: 8,
-    offset: 4,
-  },
-};
-
 const data= [
   {
     drName: 'Abc',
@@ -100,13 +82,17 @@ const data= [
   },
 ]
 
-function DoctorDashboard() {
+function PatientDashboard(props) {
   const [currentPatient, setCurrentPatient] = useState(null);
   const [form] = Form.useForm();
   const [patientDemoFormInput, setPatientDemoFormInput] = useState({
     doctorName: '',
     date:'',
   });
+
+  if(!props.isLoggedIn) {
+    return <Redirect to="/" />
+  }
 
   return (
     <div className={classes.patientDashboardContainer}>
@@ -182,4 +168,13 @@ function DoctorDashboard() {
   );
 }
 
-export default DoctorDashboard;
+
+function mapStateToProps(state) {
+  return {
+    loading: state.loading,
+    isLoggedIn: state.isLoggedIn,
+  };
+}
+
+// sending props to component
+export default connect(mapStateToProps)(PatientDashboard);

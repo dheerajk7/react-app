@@ -1,21 +1,30 @@
 import classes from "./header.module.css";
 import { Link } from "react-router-dom";
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
+import { logoutUser } from '../../actions';
+function NavigationBar(props) {
+  const { isLoggedIn, isDoctor } = props;
+  const dispatch = useDispatch();
+  function handleLogout() {
+    dispatch(logoutUser());
+  }
 
-function NavigationBar() {
   return (
     <div className={classes.header}>
       <div className={classes.logo}><Link to="/" >EHR</Link></div>
       <ul>
-        <li>
+        {(isLoggedIn && !isDoctor) && <li>
           <Link to="/patient-dashboard">Patient Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/doctor-dashboard">Doctor Dashboard</Link>
-        </li>
-        <li>
-          <div>Logout</div>
-        </li>
+        </li>}
+        {(isLoggedIn && isDoctor) &&
+          <li>
+            <Link to="/doctor-dashboard">Doctor Dashboard</Link>
+          </li>}
+        {isLoggedIn &&
+          <li className={classes.loggedInButton}>
+            <div onClick={handleLogout}>Logout</div>
+          </li>
+        }
       </ul>
     </div>
   );
@@ -26,7 +35,7 @@ function mapStateToProps(state) {
   return {
     loading: state.loading,
     isLoggedIn: state.isLoggedIn,
-    isPatient: state.isDoctor
+    isDoctor: state.isDoctor
   };
 }
 

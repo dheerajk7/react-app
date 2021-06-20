@@ -18,6 +18,9 @@ function LandingPage(props) {
   };
 
   if(props.isLoggedIn) {
+    if(props.isDoctor) {
+      return <Redirect to="/doctor-dashboard" />
+    }
     return <Redirect to="/patient-dashboard" />
   }
 
@@ -68,10 +71,10 @@ function LandingPage(props) {
 }
 
 function mapStateToProps(state) {
-  console.log(state, ' state');
   return {
     loading: state.loading,
     isLoggedIn: state.isLoggedIn,
+    isDoctor: state.isDoctor,
   };
 }
 

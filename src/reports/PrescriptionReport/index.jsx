@@ -1,6 +1,12 @@
 import classes from "./prescription.module.css";
+import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
-function PrescriptionReport() {
+function PrescriptionReport(props) {
+  if (!props.isLoggedIn) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <div className={classes.ehrReportContainer}>
       <div className={classes.title}>Medical Prescription</div>
@@ -115,4 +121,12 @@ function PrescriptionReport() {
   );
 }
 
-export default PrescriptionReport;
+function mapStateToProps(state) {
+  return {
+    loading: state.loading,
+    isLoggedIn: state.isLoggedIn,
+  };
+}
+
+// sending props to component
+export default connect(mapStateToProps)(PrescriptionReport);

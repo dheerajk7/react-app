@@ -8,7 +8,8 @@ import DummyIcon from "../images/dummy-icon-image.png";
 import CallCreationModal from "./components/CallCreationModal";
 import { Popover, Button } from "antd";
 import { Link } from 'react-router-dom';
-
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const text = "List Item";
 const { Panel } = Collapse;
@@ -57,7 +58,7 @@ const patientList = [
   },
 ];
 
-function DoctorDashboard() {
+function DoctorDashboard(props) {
   const [currentPatient, setCurrentPatient] = useState(null);
 
   function handleShowModal(patient) {
@@ -103,7 +104,10 @@ function DoctorDashboard() {
     },
   ]
 
-  console.log(currentPatient, "current patient");
+  if(!props.isLoggedIn) {
+    return <Redirect to="/" />
+  }
+
   return (
     <div className={classes.doctorDashboardContainer}>
       <div className={classes.doctorDashboardLeftContainer}>
@@ -201,4 +205,12 @@ function DoctorDashboard() {
   );
 }
 
-export default DoctorDashboard;
+function mapStateToProps(state) {
+  return {
+    loading: state.loading,
+    isLoggedIn: state.isLoggedIn,
+  };
+}
+
+// sending props to component
+export default connect(mapStateToProps)(DoctorDashboard);
