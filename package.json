@@ -2,6 +2,9 @@
   "name": "ehr-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.x"
+  },
   "dependencies": {
     "@dragan1810/use-media-recorder": "0.0.2",
     "@testing-library/jest-dom": "^5.11.4",

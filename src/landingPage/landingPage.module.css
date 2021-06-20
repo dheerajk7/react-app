@@ -25,4 +25,6 @@
 
 .loginFormButton {
   width: 100%;
+  background: #202c56 !important;
+  border: none !important;
 }

@@ -11,6 +11,7 @@ const initialState = {
     userProfile: '',
     isLoggedIn: false,
     isDoctor: false,
+    loginErrorMessage: '',
 };
 
 // changing message state in store on the basis of different actions for setting alerts
