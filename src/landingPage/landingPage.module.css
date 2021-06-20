@@ -1,0 +1,28 @@
+.loginContainer {
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #0a1437cc, #0a1437cc), url('../images/login_page_background.jpg');
+  background-position: top;
+  background-size: cover;
+}
+
+.loginForm {
+  margin: 0px !important;
+  box-shadow: 0px 0px 1px 1px #fefefe;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 19px 30px 8px !important;
+}
+
+.loginTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #202c56;
+  margin-bottom: 20px;
+}
+
+.loginFormButton {
+  width: 100%;
+}

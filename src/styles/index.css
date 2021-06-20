@@ -6,3 +6,53 @@ body {
   font-family: "Lato", sans-serif !important;
   background: #f1f1f1 !important;
 }
+
+.ant-collapse-arrow {
+  position: absolute;
+  right: 0;
+  top: 17px;
+}
+
+.ant-collapse-item {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.ant-collapse {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.ant-collapse .ant-collapse-item {
+  border: none !important;
+  border-bottom: 1px solid #e6e3e375 !important;
+  padding: 0 !important;
+}
+
+.ant-collapse-content {
+  border: none !important;
+}
+
+.ant-collapse-content-box {
+  padding: 12px !important;
+}
+.ant-collapse-header {
+  background: white !important;
+  color: #202c56 !important;
+}
+
+.ant-popover-content {
+  width: 200px;
+}
+
+.ant-picker {
+  width: 100% !important;
+}
+
+.ant-select {
+  text-align: left !important;
+}
+.ant-form {
+  margin-top: 21px !important;
+  padding: 0px 10px !important;
+}

@@ -1,10 +1,10 @@
-.doctorDashboardContainer {
+.patientDashboardContainer {
   min-height: calc(100vh - 100px);
   display: flex;
   margin: 20px;
 }
 
-.doctorDashboardLeftContainer {
+.patientDashboardLeftContainer {
   width: calc(100% - 300px);
   margin-right: 20px;
 
@@ -32,104 +32,9 @@
   color: #202c56;
 }
 
-.doctorReportTitle {
+.bookAppointmentTitle {
   font-size: 30px;
   line-height: 1.1;
-}
-
-.doctordetail {
-  box-shadow: 0px 0px 2px 1px #fefefe;
-  background: #ffffff;
-  color: #202c56;
-  font-weight: 600;
-  height: 80px;
-  margin-bottom: 20px;
-  border-radius: 18px;
-  padding: 9px 0px;
-}
-
-.doctordetail div:first-child {
-  font-size: 30px;
-  line-height: 1.2;
-}
-
-.reportReviewContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.reportReviewContainer > div {
-  width: 30%;
-  min-height: 300px;
-  box-shadow: 0px 0px 2px 1px #fefefe;
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 15px;
-}
-
-.EHRProgress {
-}
-
-.EHRAlreadyReviewed {
-}
-
-.EHRReadyToReview {
-}
-
-.EHRDetailSection {
-  color: #202c56;
-  font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.doctorDashboardRightContainer {
-  width: 300px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 1px #fefefe;
-  border-radius: 18px;
-  padding: 15px;
-}
-
-.doctorDashboardRightContainer li {
-  margin: 0;
-  padding: 10px 15px;
-  border-radius: 0px;
-}
-
-.patientDetailContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.patientDetailContainer img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.patientName {
-  font-weight: bold;
-  color: #202c56;
-  font-size: 18px;
-}
-
-.patientDetail {
-  opacity: 0.8;
-  font-size: 12px;
-}
-
-.patientCallButton {
-  width: 100%;
-  margin-top: 10px;
-  font-size: 18px;
-  padding: 0;
-  border: none;
-  border-radius: 3px;
-  background: #07910d;
-  color: white;
-  cursor: pointer;
 }
 
 .patientDetail {
@@ -191,4 +96,68 @@
 .patientDetailName {
   font-size: 30px;
   line-height: 1.2;
+}
+
+.reportReviewContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reportReviewContainer > div {
+  width: 30%;
+  min-height: 300px;
+  box-shadow: 0px 0px 2px 1px #fefefe;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 15px;
+}
+
+.notificationList {
+  padding: 0;
+  list-style: none;
+}
+
+.notificationList li {
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #d3d3d38a;
+  border-radius: 0;
+}
+
+.EHRProgress {
+}
+
+.EHRAlreadyReviewed {
+}
+
+.EHRReadyToReview {
+}
+
+.EHRDetailSection {
+  color: #202c56;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.patientDashboardRightContainer {
+  width: 300px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 1px #fefefe;
+  border-radius: 18px;
+  padding: 15px;
+  height: 305px;
+}
+
+.patientDashboardRightContainer li {
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 0px;
+}
+
+.bookDemoButton {
+  width: 100%;
+  background: #202c56 !important;
+  color: white !important;
+  font-weight: bold !important;
 }

@@ -39,3 +39,11 @@ li a {
 li a:hover {
   border-bottom: 1px solid #fffeff;
 }
+
+.logo a {
+  color: white;
+}
+
+.logo a:hover {
+  color: white !important;
+}
