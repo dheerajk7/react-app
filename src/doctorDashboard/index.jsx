@@ -5,7 +5,6 @@ import { List, Avatar } from "antd";
 import "antd/dist/antd.css";
 import { Collapse } from "antd";
 import DummyIcon from "../images/dummy-icon-image.png";
-import CallCreationModal from "./components/CallCreationModal";
 import { Popover, Button } from "antd";
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
